@@ -1,9 +1,100 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 16px;
 }
+
+/* Headings */
+h1 {
+  font-size: clamp(2.8rem, 4vw, 3.8rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 2.5vw, 2.4rem);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+/* Body text */
+p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Mono (stats, numbers) */
+.font-mono {
+  font-family: var(--font-mono), monospace;
+  letter-spacing: -0.01em;
+}
+
+/* Cards */
+.card {
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+}
+
+/* Hover motion */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.9rem 1.4rem;
+  font-size: 1.05rem;
+  border-radius: 0.9rem;
+}
+
+.btn-press {
+  transition: transform 0.15s ease;
+}
+
+.btn-press:active {
+  transform: scale(0.97);
+}
+
+
+
+:root {
+  --bg-main: #f7f9fc;
+  --bg-card: #ffffff;
+  --bg-panel: #eef3fb;
+
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+
+  --border-soft: #e2e8f0;
+
+  --accent: #3b82f6;
+}
+
+.dark {
+  --bg-main: #0b0f1a;
+  --bg-card: #0f1629;
+  --bg-panel: #121a33;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --border-soft: #1f2933;
+
+  --accent: #60a5fa;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -24,3 +115,99 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+@keyframes tickPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tick-animate {
+  animation: tickPop 0.35s ease-out;
+}
+
+@keyframes xpPop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.xp-pop {
+  animation: xpPop 0.4s ease;
+}
+
+/* === Campaign Tick Animation === */
+@keyframes tickPop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tick-animate {
+  animation: tickPop 0.35s ease-out;
+}
+
+/* === XP Gain Animation === */
+@keyframes xpPop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.xp-pop {
+  animation: xpPop 0.4s ease;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+
+.card-flip {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card-flip.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
