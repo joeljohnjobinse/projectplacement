@@ -1,3 +1,89 @@
+# ProjectPlacement
+
+ProjectPlacement is a **student-focused interview preparation platform** built as a foundational model that can grow with community input.
+
+The goal of this project is simple:  
+to create a practical space where students can practice, track, and improve their interview readiness — technically, analytically, and structurally.
+
+This repository currently represents an **early but functional version** of the idea. The architecture is intentionally kept clean and extensible so it can be improved, expanded, and shaped further with feedback from other students and developers.
+
+---
+
+## Why this project exists
+
+As a student, interview preparation often feels scattered:
+- questions in one place,
+- progress tracking in another,
+- no clear sense of improvement over time.
+
+ProjectPlacement is an attempt to bring these pieces together into **one structured platform**, while keeping the system simple enough to evolve over time.
+
+---
+
+## Current state of the project
+
+- This is a **basic model**, not a finished product
+- The codebase is intentionally lean
+- Not all features are fully explored yet
+- Several pages and flows are open to improvement and extension
+
+That’s by design.
+
+This project is meant to be **built on**, not locked in.
+
+---
+
+## What the app currently includes
+
+- Authentication and user flow
+- Practice and mock-style sections
+- Multiple feature pages designed for interview preparation
+- Progress-related views and history
+- A clean UI structure with dark-mode-first styling
+- Modular components that can be reused and expanded
+
+There are multiple pages and routes already present, and more can easily be added without restructuring the app.
+
+---
+
+## Contribution & suggestions
+
+This project is **open to suggestions and improvements**, especially from:
+- students preparing for placements
+- developers learning full-stack development
+- anyone interested in improving interview prep tools
+
+Ideas could include:
+- improving existing pages
+- adding new practice formats
+- refining UX and visual hierarchy
+- better progress insights
+- performance or structure optimizations
+
+Even small suggestions are welcome.
+
+---
+
+## Tech overview
+
+- Next.js (App Router)
+- React
+- Firebase (auth & data)
+- Tailwind CSS
+- TypeScript
+
+---
+
+## Final note
+
+ProjectPlacement is not meant to be perfect —  
+it’s meant to be **useful, learnable, and improvable**.
+
+If you’re a student, this is something you can relate to.  
+If you’re a developer, this is something you can help shape.
+
+--------------------------------------------------------------------------
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
